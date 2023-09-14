@@ -10,6 +10,10 @@ async function regconnect(){
 module.exports=regconnect;
 
 
+async function odconnect(){
+    const con = await client.connect();
+    const db= con.db('can');
+    return db.collection('order');
 
-
-
+};
+module.exports=odconnect;
